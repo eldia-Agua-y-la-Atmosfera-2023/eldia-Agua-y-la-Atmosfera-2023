@@ -46,6 +46,8 @@ for j, session in enumerate(sessions):
                                         subset.iloc[i]['First Name'],
                                         subset.iloc[i]['Last Name'],
                                         color,
+                                        subset.iloc[i]['Faculty Advisors'],
+                                        color,
                                         str(data['Time Slot'].loc[subset.index[i]])[:5],
                                         color,
                                         str(subset.index[i]) + '_' + subset.iloc[i]['First Name'],
@@ -71,9 +73,9 @@ poster[81] = poster[81].format(tables[4])
 with open(r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-2023.github.io/abstracts_poster.html', 'w', encoding='utf-8') as f:
         f.writelines(poster)
 
-oral[73] = oral[73].format(tables[0])
-oral[85] = oral[85].format(tables[1])
-oral[97] = oral[97].format(tables[2])
+oral[74] = oral[74].format(tables[0])
+oral[87] = oral[87].format(tables[1])
+oral[100] = oral[100].format(tables[2])
 
 with open(r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-2023.github.io/abstracts_oral.html', 'w', encoding='utf-8') as f:
         f.writelines(oral)
