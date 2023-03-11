@@ -111,11 +111,12 @@ for i in range(0, data.shape[0]):
     sample[29] = sample[29].format(data.iloc[i]['Faculty Advisors'])
     sample[30] = sample[30].format(data.iloc[i]['Affiliation'])
     
-    '''if str(data.iloc[i]['Link to Video']) == 'nan': 
+    if str(data.iloc[i]['Link to Video']) == 'nan': 
         sample[33] = sample[33].format("")
     else:
-        sample[33] = sample[33].format(data.iloc[i]['Link to Video'])'''
-    
+        #sample[33] = sample[33].format(data.iloc[i]['Link to Video'])
+        sample[33] = sample[33].format("")# No vedio require for 2023
+
     filename = r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-2023.github.io/Abstracts/{}_{}.html'.format(data.index[i], data.iloc[i]['First Name'])
     with open(filename, 'w', encoding='utf-8') as f:
         f.writelines(sample)
