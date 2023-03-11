@@ -54,7 +54,7 @@
 				<thead>
 					
 				  <tr>
-					<th class="th" colspan="3">Oral Presentations</th>
+					<th class="th" colspan="4">Oral Presentations</th>
 				  </tr>
 					
 				</thead>
