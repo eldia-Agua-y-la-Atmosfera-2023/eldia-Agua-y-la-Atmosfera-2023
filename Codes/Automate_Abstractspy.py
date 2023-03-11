@@ -92,6 +92,7 @@ for i in range(0, data.shape[0]):
     
     if data.iloc[i]['Presentation Session'] in ['Oral Session 3', 'Oral Session 2', 'Oral Session 1']:
         sample = text_oral.copy()
+        #print(sample[33])
         sample[34] = sample[34].format(session, adict[data.iloc[i]['Presentation Session']])
         sample[36] = sample[36].format(data.iloc[i]['Abstract Text'])
     elif data.iloc[i] ['Presentation Session'] in ['Poster Session 1', 'Poster Session 2']:
@@ -110,10 +111,10 @@ for i in range(0, data.shape[0]):
     sample[29] = sample[29].format(data.iloc[i]['Faculty Advisors'])
     sample[30] = sample[30].format(data.iloc[i]['Affiliation'])
     
-    if str(data.iloc[i]['Link to Video']) == 'nan': 
+    '''if str(data.iloc[i]['Link to Video']) == 'nan': 
         sample[33] = sample[33].format("")
     else:
-        sample[33] = sample[33].format(data.iloc[i]['Link to Video'])
+        sample[33] = sample[33].format(data.iloc[i]['Link to Video'])'''
     
     filename = r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-2023.github.io/Abstracts/{}_{}.html'.format(data.index[i], data.iloc[i]['First Name'])
     with open(filename, 'w', encoding='utf-8') as f:
