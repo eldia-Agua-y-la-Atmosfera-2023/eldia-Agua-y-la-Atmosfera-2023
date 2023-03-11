@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 #%%
-text_or = '<tr><td class="{}" nowrap>{} {}</td><td class="{}">{}</td><td class="{}"><a href="./Abstracts/{}.html">{}</a></td></tr>'
+text_or = '<tr><td class="{}" nowrap>{} {}</td><td class="{}">{}</td><td class="{}">{}</td><td class="{}"><a href="./Abstracts/{}.html">{}</a></td></tr>'
 text_po = '<tr><td class="{}" nowrap>{} {}</td><td class="{}"><a href="./Abstracts/{}.html">{}</a></td></tr>'
 with open(r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-2023.github.io/Codes/text2.txt') as f:
     poster = f.readlines()
