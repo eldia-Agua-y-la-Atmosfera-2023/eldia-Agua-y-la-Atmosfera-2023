@@ -87,10 +87,10 @@ with open(r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-202
 
 #%% write files
 adict = {
-    'Oral Session 3': 'Oral Session 3:  Aerosols, Isotopes, and Soils', 
+    'Oral Session 3': 'Oral Session 3', 
     'Poster Session 2': 'Poster Session 2', 
-    'Oral Session 2': 'Oral Session 2: Data-Driven and Physically-Based Modeling',
-    'Oral Session 1': 'Oral Session 1: Weather and Hydroclimate Extremes', 
+    'Oral Session 2': 'Oral Session 2',
+    'Oral Session 1': 'Oral Session 1', 
     'Poster Session 1': 'Poster Session 1'
     }
 for i in range(0, data.shape[0]):
