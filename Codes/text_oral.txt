@@ -62,7 +62,7 @@
 				<tbody>
 					
 					<tr>
-						<td class="th" colspan="3" align="center" style="background-color: aqua"><strong>Oral Session 1</strong> - <a href="rubrics.html">Rubrics for Judges</a><br><strong>Moderator: </strong>TBA</td>
+						<td class="th" colspan="4" align="center" style="background-color: aqua"><strong>Oral Session 1</strong> - <a href="rubrics.html">Rubrics for Judges</a><br><strong>Moderator: </strong>TBA</td>
 					</tr>
 					
 					<tr>
@@ -75,7 +75,7 @@
 					{}
 					
 					<tr>
-						<td class="th" colspan="3" align="center" style="background-color: aqua"><strong>Oral Session 2</strong> - <a href="rubrics.html">Rubrics for Judges</a><br><strong>Moderator: </strong>TBA</td>
+						<td class="th" colspan="4" align="center" style="background-color: aqua"><strong>Oral Session 2</strong> - <a href="rubrics.html">Rubrics for Judges</a><br><strong>Moderator: </strong>TBA</td>
 					</tr>
 					
 					<tr>
@@ -88,7 +88,7 @@
 					{}
 					
 					<tr>
-						<td class="th" colspan="3" align="center" style="background-color: aqua"><strong>Oral Session 3</strong> - <a href="rubrics.html">Rubrics for Judges</a><br><strong>Moderator: </strong>TBA</td>
+						<td class="th" colspan="4" align="center" style="background-color: aqua"><strong>Oral Session 3</strong> - <a href="rubrics.html">Rubrics for Judges</a><br><strong>Moderator: </strong>TBA</td>
 					</tr>
 					
 					<tr>

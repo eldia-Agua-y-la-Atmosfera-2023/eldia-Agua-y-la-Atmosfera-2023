@@ -52,7 +52,7 @@ for j, session in enumerate(sessions):
                                         color,
                                         str(subset.index[i]) + '_' + subset.iloc[i]['First Name'],
                                         subset.iloc[i]['Abstract Title'].title()) + ' '
-
+            print(str(data['Time Slot'].loc[subset.index[i]])[:5])
         else:
             table = table + text_po.format(color,
                                         subset.iloc[i]['First Name'],
@@ -65,6 +65,7 @@ for j, session in enumerate(sessions):
 
             #print(table)
     tables.append(table)
+
 
 #%%
 poster[70] = poster[70].format(tables[3])
