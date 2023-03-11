@@ -26,10 +26,15 @@ times = [['TBA'] * 6] * 3
 tables = []
 sessions = ['Oral Session 1', 'Oral Session 2', 'Oral Session 3', 'Poster Session 1', 'Poster Session 2']
 for j, session in enumerate(sessions):
+    print("!")
+    print(j)
+    print(session)
+    print("!")
     table = ''
     subset = data[data['Presentation Session'] == session]
     if j < 3:
         subset = subset = subset.sort_values('Time Slot')
+        #print(subset)
     for i in range(subset.shape[0]):
         if i%2 == 0:
             color = 'gr'
@@ -45,7 +50,7 @@ for j, session in enumerate(sessions):
                                         color,
                                         str(subset.index[i]) + '_' + subset.iloc[i]['First Name'],
                                         subset.iloc[i]['Abstract Title'].title()) + ' '
-            #print(table)
+
         else:
             table = table + text_po.format(color,
                                         subset.iloc[i]['First Name'],
@@ -55,6 +60,8 @@ for j, session in enumerate(sessions):
                                         color,
                                         str(subset.index[i]) + '_' + subset.iloc[i]['First Name'],
                                         subset.iloc[i]['Abstract Title'].title()) + ' '
+
+            #print(table)
     tables.append(table)
 
 #%%
@@ -93,43 +100,31 @@ for i in range(0, data.shape[0]):
     if data.iloc[i]['Presentation Session'] in ['Oral Session 3', 'Oral Session 2', 'Oral Session 1']:
         sample = text_oral.copy()
         #print(sample[33])
-        sample[34] = sample[34].format(session, adict[data.iloc[i]['Presentation Session']])
-        sample[36] = sample[36].format(data.iloc[i]['Abstract Text'])
+        sample[34+1] = sample[34+1].format(session, adict[data.iloc[i]['Presentation Session']])
+        sample[36+1] = sample[36+1].format(data.iloc[i]['Abstract Text'])
     elif data.iloc[i] ['Presentation Session'] in ['Poster Session 1', 'Poster Session 2']:
         sample = text_poster.copy()
-        sample[35] = sample[35].format(session, adict[data.iloc[i]['Presentation Session']])
-        sample[37] = sample[37].format(data.iloc[i]['Abstract Text'])
+        sample[35+1] = sample[35+1].format(session, adict[data.iloc[i]['Presentation Session']])
+        sample[37+1] = sample[37+1].format(data.iloc[i]['Abstract Text'])
         if str(data.iloc[i]['Link to PDF']) == 'nan': 
-            sample[34] = sample[34].format("")
+            sample[34+1] = sample[34+1].format("")
         else:
-            sample[34] = sample[34].format(data.iloc[i]['Link to PDF'])
+            sample[34+1] = sample[34+1].format(data.iloc[i]['Link to PDF'])
         
     sample[3] = sample[3].format(data.iloc[i]['First Name'])
-    sample[25] = sample[25].format(data.iloc[i]['Abstract Title'].title())
-    sample[27] = sample[27].format(data.iloc[i]['First Name'], data.iloc[i]['Last Name'])
-    sample[28] = sample[28].format(coauthors)
-    sample[29] = sample[29].format(data.iloc[i]['Faculty Advisors'])
-    sample[30] = sample[30].format(data.iloc[i]['Affiliation'])
+    sample[25+1] = sample[25+1].format(data.iloc[i]['Abstract Title'].title())
+    sample[27+1] = sample[27+1].format(data.iloc[i]['First Name'], data.iloc[i]['Last Name'])
+    sample[28+1] = sample[28+1].format(coauthors)
+    sample[29+1] = sample[29+1].format(data.iloc[i]['Faculty Advisors'])
+    sample[30+1] = sample[30+1].format(data.iloc[i]['Affiliation'])
     
     if str(data.iloc[i]['Link to Video']) == 'nan': 
-        sample[33] = sample[33].format("")
+        sample[33+1] = sample[33+1].format("")
     else:
         #sample[33] = sample[33].format(data.iloc[i]['Link to Video'])
-        sample[33] = sample[33].format("")# No vedio require for 2023
+        sample[33+1] = sample[33+1].format("")# No vedio require for 2023
 
     filename = r'/Users/yhwang/Desktop/HPC_DownloadTemp/eldia-Agua-y-la-Atmosfera-2023.github.io/Abstracts/{}_{}.html'.format(data.index[i], data.iloc[i]['First Name'])
     with open(filename, 'w', encoding='utf-8') as f:
         f.writelines(sample)
 
-
-
-
-
-
-
-
-
-
-
-
-    
