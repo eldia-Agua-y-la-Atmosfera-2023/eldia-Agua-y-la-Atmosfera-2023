@@ -20,9 +20,9 @@ times = [
     ['13:45', '13:55', '14:05', '14:15', '14:25', '14:35'],
     ['15:55', '16:05', '16:15', '16:25', '16:35', '16:45']
     ]
-
+#print(times)
 times = [['TBA'] * 6] * 3
-
+#print(times)
 tables = []
 sessions = ['Oral Session 1', 'Oral Session 2', 'Oral Session 3', 'Poster Session 1', 'Poster Session 2']
 for j, session in enumerate(sessions):
@@ -45,6 +45,7 @@ for j, session in enumerate(sessions):
                                         color,
                                         str(subset.index[i]) + '_' + subset.iloc[i]['First Name'],
                                         subset.iloc[i]['Abstract Title'].title()) + ' '
+            #print(table)
         else:
             table = table + text_po.format(color,
                                         subset.iloc[i]['First Name'],
